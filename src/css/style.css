@@ -1,0 +1,167 @@
+:root {
+  --Tomato: hsl(4, 100%, 67%);
+
+  --clr-accent-400: hsl(349, 90%, 66%);
+  --clr-accent-500: hsl(12, 93%, 58%);
+  --clr-linear-gradient: linear-gradient(127deg, var(--clr-accent-400) 40%, var(--clr-accent-500) 70%);
+
+  --Dark-Slate-Grey: hsl(234, 29%, 20%);
+  --Charcoal-Grey: hsl(235, 18%, 26%);
+  --Grey: hsl(231, 7%, 60%);
+  --White: hsl(0, 0%, 100%);
+}
+
+body {
+  height: 100vh;
+  background-color: var(--Dark-Slate-Grey);
+  font-family: 'Roboto', sans-serif;
+}
+
+.imgMobile {
+  display: none;
+}
+
+main {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--Dark-Slate-Grey);
+  width: 820px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 20px 20px 20px 55px;
+  gap: 55px;
+  border-radius: 30px;
+  background-color: var(--White);
+}
+
+h1 {
+  font-size: 56px;
+  font-weight: 700;
+}
+
+ul {
+  padding-left: 0;
+}
+
+li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.formDiv {
+  display: flex;
+  justify-content: space-between;
+}
+
+#result {
+  color: var(--Tomato);
+}
+
+input {
+  padding: 15px 15px;
+  border-radius: 6px;
+  border: solid 1px var(--Grey);
+}
+
+input.error {
+  background-color: hsla(12, 80%, 82%, 0.484);
+  border-color: var(--Tomato);
+
+}
+
+.error::placeholder {
+  color: var(--Tomato);
+}
+
+button {
+  margin-top: 10px;
+  width: 100%;
+  padding: 20px 20px;
+  border-radius: 6px;
+  color: var(--White);
+  background-color: var(--Dark-Slate-Grey);
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--clr-linear-gradient);
+  box-shadow: 5px 10px 10px hsla(4, 77%, 44%, 0.275)
+}
+
+.sectionThanks {
+  display: none;
+  margin: 100px auto;
+  font-weight: 400;
+  color: var(--Dark-Slate-Grey);
+  width: 380px;
+  background-color: var(--White);
+  padding: 50px;
+  border-radius: 30px;
+}
+
+.sectionThanks p {
+  line-height: 25px;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: var(--White);
+  margin: 80px auto;
+}
+
+.attribution a {
+  color: var(--White);
+}
+
+.attribution a:hover {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 1000px) {
+  body {
+    margin-top: 0;
+  }
+
+  main {
+    width: 355px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px 20px ;
+    margin-top: 0;
+    border-radius: 0;
+    font-size: 15px;
+  }
+
+  .imgMobile {
+    display: block;
+  }
+
+  .imgDesktop {
+    display: none;
+  }
+  
+  .sectionThanks {
+    width: 320px;
+    padding: 100px 20px 10px;
+    border-radius: 4px;
+    font-size: 15px;
+  }
+  .sectionThanks h1 {
+    font-size: 40px;
+  }
+  .sectionThanks button {
+    margin-top: 200px;
+  }
+}
